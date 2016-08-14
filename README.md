@@ -2,9 +2,13 @@
 顶部滚动视图菜单 （常见的APP中顶部滚动菜单的选择， 使用UIScrollView进行封装，使用起来极其简单、实用、方便）
 
 一：使用方法一：
+
 1、将项目中SGTopScrollMenu文件夹拖入工程
+
 2、导入#import "SGTopScrollMenu.h"头文件
+
 3、通过alloc、initWithFrame或者类方法topScrollMenuWithFrame去创建
+
 4、遵循SGTopScrollMenuDelegate协议的topScrollMenuDelegate方法（- (void)SGTopScrollMenu:(SGTopScrollMenu *)topScrollMenu didSelectTitleAtIndex:(NSInteger)index；）
 
 二、使用方法二：（请参照Demo中的使用）
