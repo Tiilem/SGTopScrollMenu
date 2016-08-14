@@ -15,6 +15,7 @@
 
 #define labelFontOfSize [UIFont systemFontOfSize:17]
 #define SG_screenWidth [UIScreen mainScreen].bounds.size.width
+#define selectedTitleAndIndicatorViewColor [UIColor redColor]
 
 @interface SGTopScrollMenu ()
 @property (nonatomic, strong) UILabel *titleLabel;
@@ -81,8 +82,8 @@ static CGFloat const radio = 1.0;
         _titleLabel.userInteractionEnabled = YES;
         _titleLabel.text = self.titlesArr[i];
         // 设置高亮文字颜色
-        _titleLabel.highlightedTextColor = [UIColor redColor];
-
+        _titleLabel.highlightedTextColor = selectedTitleAndIndicatorViewColor;
+ 
         _titleLabel.tag = i;
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         
@@ -120,7 +121,7 @@ static CGFloat const radio = 1.0;
     
     // 添加指示器
     self.indicatorView = [[UIView alloc] init];
-    _indicatorView.backgroundColor = [UIColor redColor];
+    _indicatorView.backgroundColor = selectedTitleAndIndicatorViewColor;
     _indicatorView.SG_height = indicatorHeight;
     _indicatorView.SG_y = self.frame.size.height - indicatorHeight;
     [self addSubview:_indicatorView];
